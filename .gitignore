@@ -20,3 +20,8 @@
 .DS_Store
 Thumbs.db
 ###< ide/os ###
+
+###> friendsofphp/php-cs-fixer ###
+/.php-cs-fixer.php
+/.php-cs-fixer.cache
+###< friendsofphp/php-cs-fixer ###

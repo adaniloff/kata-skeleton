@@ -25,8 +25,11 @@ php-composer *args:
 php-console *args:
     docker compose exec php bin/console {{args}}
 
-php-test:
-    docker compose exec php bin/phpunit
+php-lint *args:
+    docker compose exec php ./vendor/bin/php-cs-fixer {{args}}
+
+php-test *args:
+    docker compose exec php bin/phpunit {{args}}
 
 _list:
     @just -l
@@ -38,4 +41,5 @@ alias build := docker-build
 alias sh := php-sh
 alias comp := php-composer
 alias console := php-console
+alias cs := php-lint
 alias test := php-test
